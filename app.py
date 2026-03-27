@@ -11,11 +11,6 @@ st.set_page_config(page_title="宸品團隊浮水印工具", page_icon="🏠", l
 st.title("🏠 宸品團隊 - 批次照片浮水印神器")
 st.write("上傳多張物件照片，一鍵鋪滿浮水印並自動打包，省時最高效！")
 
-st.sidebar.header("⚙️ 浮水印微調設定")
-opacity = st.sidebar.slider("1. 不透明度 (越高越清楚)", min_value=10, max_value=100, value=60, step=5)
-logo_scale = st.sidebar.slider("2. 浮水印大小", min_value=5, max_value=40, value=15, step=1)
-spacing = st.sidebar.slider("3. 排列間距 (越小越密)", min_value=1.0, max_value=3.0, value=1.5, step=0.1)
-
 logo_path = 'logo.png'
 if not os.path.exists(logo_path):
     st.error("⚠️ 找不到 logo.png！請確認 Logo 圖檔跟這個程式放在同一個資料夾。")
